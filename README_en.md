@@ -90,7 +90,3 @@ print(generated_text)
 
 </details>
 
-## Citation
-
-```
-```

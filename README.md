@@ -89,8 +89,3 @@ print(generated_text)
 ```
 
 </details>
-
-## 引用
-
-```
-```
