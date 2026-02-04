@@ -2,42 +2,42 @@
 The Ruyi2 Large Model (AI-Flow-Ruyi2) was developed by the AI Flow team of the TeleAI Research Institute at China Telecom. It is a familial model designed for the next-generation “end-edge-cloud” model service architecture.
 
 
-## 使用
+## Usage
 
-Step 1. 创建并激活虚拟环境
+Step 1. Create and activate a virtual environment
 
 ```sh
 conda create -n ruyi python=3.12
 conda activate ruyi
 ```
 
-Step 2. 克隆本仓库至本地
+Step 2. Clone this warehouse to local
 
 ```sh
 git clone https://github.com/TeleAI-AI-Flow/AI-Flow-Ruyi2.git
 cd AI-Flow-Ruyi
 ```
 
-Step 3. 由源码安装（PS: flash_attn编译安装较慢，建议移步[官方仓库](https://github.com/Dao-AILab/flash-attention/releases/tag/v2.7.4.post1)下载whl手动安装）
+Step 3. Installation from source (PS: flash_attn compilation and installation is slow, it is recommended to move to the [official repository](https://github.com/Dao-AILab/flash-attention/releases/tag/v2.7.4.post1) to download whl manual installation)
 
 ```sh
 pip install -e .
 ```
 
-Step 4. 下载模型权重
+Step 4. Download model weights
 
 ```sh
 git clone https://www.modelscope.cn/TeleAI-AI-Flow/AI-Flow-Ruyi-7B-0725.git models/AI-Flow-Ruyi-7B-0725
 ```
 
-Step 5. 运行Demo
+Step 5. Run Demo
 
 ```sh
 python demo.py
 ```
 
 <details>
-<summary>查看Demo代码</summary>
+<summary>View demo code</summary>
 
 ```py
 import torch
@@ -90,7 +90,7 @@ print(generated_text)
 
 </details>
 
-## 引用
+## Citation
 
 ```
 ```

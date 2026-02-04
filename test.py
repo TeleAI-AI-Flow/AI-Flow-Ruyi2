@@ -1,52 +1,13 @@
-# AI-Flow-Ruyi2
-The Ruyi2 Large Model (AI-Flow-Ruyi2) was developed by the AI Flow team of the TeleAI Research Institute at China Telecom. It is a familial model designed for the next-generation “end-edge-cloud” model service architecture.
+#!/usr/bin/env python
+# Copyright (c) Institute of Artificial Intelligence (TeleAI), China Telecom, 2025. All Rights Reserved.
 
-
-## 使用
-
-Step 1. 创建并激活虚拟环境
-
-```sh
-conda create -n ruyi python=3.12
-conda activate ruyi
-```
-
-Step 2. 克隆本仓库至本地
-
-```sh
-git clone https://github.com/TeleAI-AI-Flow/AI-Flow-Ruyi2.git
-cd AI-Flow-Ruyi
-```
-
-Step 3. 由源码安装（PS: flash_attn编译安装较慢，建议移步[官方仓库](https://github.com/Dao-AILab/flash-attention/releases/tag/v2.7.4.post1)下载whl手动安装）
-
-```sh
-pip install -e .
-```
-
-Step 4. 下载模型权重
-
-```sh
-git clone https://www.modelscope.cn/TeleAI-AI-Flow/AI-Flow-Ruyi-7B-0725.git models/AI-Flow-Ruyi-7B-0725
-```
-
-Step 5. 运行Demo
-
-```sh
-python demo.py
-```
-
-<details>
-<summary>查看Demo代码</summary>
-
-```py
 import torch
 from ruyi.global_var import set_global_val
 from transformers import GenerationConfig
 from transformers import AutoModelForCausalLM, AutoTokenizer
 
 
-model_path = f"models/AI-Flow-Ruyi2-14B"
+model_path = f"/gemini/space/guarded_files/junyihao/output/model_out/qwen3_sft_v10_36000_bf16/Endpoint39_HF"
 tokenizer = AutoTokenizer.from_pretrained(model_path, trust_remote_code=True)
 model = AutoModelForCausalLM.from_pretrained(model_path, trust_remote_code=True, attn_implementation='flash_attention_2', torch_dtype=torch.bfloat16).to('cuda')
 
@@ -76,7 +37,7 @@ with torch.no_grad():
     # - 2: 第一个早退出点，对应约1.7B
     # - 21: 第二个早退出点，对应约8B
     # - 39: 第三个早退出点，对应约14B
-    set_global_val("early_exit_point", 39)  
+    set_global_val("early_exit_point", 2)  
 
     output = model.generate(
         inputs["input_ids"].to('cuda'),
@@ -86,11 +47,3 @@ with torch.no_grad():
 # 解码并打印结果
 generated_text = tokenizer.decode(output[0], skip_special_tokens=False)
 print(generated_text)
-```
-
-</details>
-
-## 引用
-
-```
-```
