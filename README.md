@@ -1,9 +1,5 @@
 # AI-Flow-Ruyi2 (Ruyi2大模型)
 
-<p align="center">
-    <img src="assets/AI-Flow-Ruyi-logo.png" width="500" />
-</p>
-
 ## 介绍
 
 **Ruyi2大模型（AI-Flow-Ruyi2）** 是中国电信人工智能研究院 (TeleAI) 智传网（AI Flow）团队研发，是面向下一代“端-边-云”模型服务架构的**同源家族模型（Familial Model）**。该模型基于 Qwen3-14B 基座构建，确立了“一次训练，多处部署”（Train Once, Deploy Many）的全新范式。其核心在于 1.7B（端）、8B（边）与 14B（云）三个嵌套分支共享主干参数，通过动态早退出机制实现不同算力环境下的自适应推理。针对端侧部署，模型创新性引入 DaE（Decompose after Expansion）框架，结合稳定块扩展（SBE）与 SVD 后训练压缩技术，在降低 40% 增量参数的同时显著增强了小模型的逻辑推理能力，从而实现了高效的端边云协同与高性能的边缘智能落地。
