@@ -37,7 +37,7 @@
 * Ruyi2-14B：云端旗舰的全指标统治力 作为家族中的全量旗舰，Ruyi2-14B 在所有关键评测指标上确立了绝对的统治地位。它充分释放了共享主干网络的全部潜能，不仅进一步刷新了通用知识的上限（MMLU 81.84），更在数学与复杂逻辑推理任务中展现了压倒性优势，其 GSM-8K（94.24）和 Math（86.52）得分均超越了 Qwen3-14B。Ruyi2-14B 是处理高阶复杂问题、长逻辑链推理的最稳健选择，代表了该系列模型的最高智能水平。
 
 <details>
-<summary>Performance Comparison: Ruyi2 vs Qwen3</summary>
+<summary>性能比较: Ruyi2 vs Qwen3</summary>
 
 | Model | MMLU | MMLU-P | CMMLU | BBH | ARC-c | Hella | IFEval | Human | Math | GSM8K | Avg. |
 | :--- | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
